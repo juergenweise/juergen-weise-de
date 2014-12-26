@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h2>Startseite</h2> 
+<p><strong>Herzlich willkommen,</strong><br />
+mein Name ist Jürgen Weise. Ich wohne seit 35 Jahren in Leonberg und mache mir natürlich auch Gedanken über unser aller „Wohl und Wehe“. Auf dieser Website finden Sie Stellungnahmen zu aktuellen Themen. Diese Stellungnahmen spiegeln meine ganz persönliche Meinung wider.</p>
+<p>In einer Stadt wie Leonberg treten immer wieder Aufgabenstellungen auf, die einen großen Teil der Bevölkerung betreffen, wie z. B. Schaffung neuen Wohnraums, Verkehrsberuhigung, Industrieansiedlung oder der Ausbau sozialer Einrichtungen.  Auf dieser Webseite versuche ich, die Informationen zu einem allgemein interessierenden Thema zusammenzustellen und verständlich aufzubereiten, um die Basis für einen an den Fakten orientierten Gedankenaustausch zu bieten.</p>
+<h3>Aktuelle Artikel</h3>
+<ul class="posts">
+{% for post in site.posts limit:5 %}
+{% unless post.draft %}
+<li><a href="{{ post.url }}">{{ post.title }} (<span>{{ post.date | date: "%d.%m.%Y" }}</span>)</a></li>
+{% endunless %}
+{% endfor %}
+</ul>
+

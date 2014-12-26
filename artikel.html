@@ -1,0 +1,14 @@
+---
+title: Artikel
+layout: default
+meta:
+---
+<p>Hier finden Sie meine bisherigen Artikel in chronologischer Reihenfolge.</p>
+<ul>
+{% for post in site.posts %}
+<li>
+<a href="{{ post.url }}">{{ post.title }} (<span>{{ post.date | date: "%d.%m.%Y" }}</span>)</a>
+</li>
+{% endfor %}
+</ul>
+

@@ -1,0 +1,13 @@
+
+{% include header.html %}
+
+<h2>{{ page.title }}</h2>
+
+{% assign author = site.data.author[page.author] %}
+{% if author %}
+<p>Veröffentlicht am {{ page.date | date: "%d.%m.%Y" }} von <a href="{{ author.web }}">{{ author.name }}</a></p>
+{% endif %}
+
+{{ content }}
+
+{% include footer.html %}

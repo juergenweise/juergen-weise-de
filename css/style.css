@@ -1,0 +1,501 @@
+
+/* Code and design by Stefan Weise */
+
+/* fonts */
+
+/* Arimo: http://www.fontsquirrel.com/license/arimo */
+
+@font-face {
+    font-family: 'ArimoRegular';
+    src: url('/webfonts/arimo/Arimo-Regular-Latin-webfont.eot');
+    src: url('/webfonts/arimo/Arimo-Regular-Latin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/webfonts/arimo/Arimo-Regular-Latin-webfont.woff') format('woff'),
+         url('/webfonts/arimo/Arimo-Regular-Latin-webfont.ttf') format('truetype'),
+         url('/webfonts/arimo/Arimo-Regular-Latin-webfont.svg#ArimoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ArimoBold';
+    src: url('/webfonts/arimo/Arimo-Bold-Latin-webfont.eot');
+    src: url('/webfonts/arimo/Arimo-Bold-Latin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/webfonts/arimo/Arimo-Bold-Latin-webfont.woff') format('woff'),
+         url('/webfonts/arimo/Arimo-Bold-Latin-webfont.ttf') format('truetype'),
+         url('/webfonts/arimo/Arimo-Bold-Latin-webfont.svg#ArimoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* DroidSeri: */
+
+@font-face {
+    font-family: 'DroidSerifRegular';
+    src: url('/webfonts/droidserif/DroidSerif-Regular-webfont.eot');
+    src: url('/webfonts/droidserif/DroidSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/webfonts/droidserif/DroidSerif-Regular-webfont.woff') format('woff'),
+         url('/webfonts/droidserif/DroidSerif-Regular-webfont.ttf') format('truetype'),
+         url('/webfonts/droidserif/DroidSerif-Regular-webfont.svg#DroidSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*  WordPress Core */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* main layout */
+
+html {
+    margin : 0;
+    padding : 0;
+    background : #eee;
+    color : #000;
+}
+body {
+    margin : 0;
+    padding : 0;
+    background : url(/images/design/bg-body.png) repeat-x fixed #eee;
+    color : #000;
+    font : 16px/200% 'ArimoRegular', Arial, sans-serif;
+}
+img {
+    max-width:100%;
+    height:auto;
+}
+hr {
+    border : none;
+    clear : both;
+}
+
+/* header */
+
+header.mh {
+    height : 120px;
+    padding : 20px;
+    background : url(/images/design/bg-header.png) repeat-x #777;
+    color : #fff;
+}
+header.mh h1 {
+    margin-top : 35px;
+    font-size : 40px;
+    text-shadow : black 0.1em 0.1em 0.2em;
+    font-family : 'DroidSerifRegular', Arial, sans-serif;
+    font-weight:normal;
+}
+header.mh h1 a {
+    background : transparent;
+    color : #fff;
+    text-decoration : none;
+    outline : none;
+}
+
+/* footer */
+
+footer.mf {
+    padding : 20px;
+    background-image : url(/images/design/bg-footer.png);
+    background-repeat:repeat-x;
+    background-color:#777;
+    color : #fff;
+    text-align : center;
+}
+footer.mf a {
+    background : transparent;
+    color : #fff;
+}
+
+/* left */
+
+#left {
+    float : left;
+    max-width:100%;
+    width:190px;
+    margin-top:20px;
+} 
+#left nav ul {
+    margin : 0;
+    padding : 0;
+    list-style : none;
+}
+#left nav ul li {
+    margin : 14px 0;
+    border-bottom : 1px solid #111;
+    padding-bottom : 4px;
+}
+#left nav ul li a {
+    color : #000;
+    background : #fff;
+    text-decoration:none;
+}
+.selectnav {
+    display: none;
+}
+
+/* right */
+
+#right {
+    float : right;
+    max-width:100%;
+    width : 650px;
+    margin-top : 20px;
+}
+#right p {
+    font-size : 16px;
+}
+#right img {
+    border:1px solid #ccc;
+}
+#right p span {
+    font-size : 16px;
+}
+#right p strong {
+    font-size : 16px;
+    font-weight:bold;
+}
+#right table {
+    width : 100%;
+    border : 1px solid #ccc;
+}
+#right table th {
+    border : 1px solid #ccc;
+    background : #eee;
+    color : #000;
+    text-align:left;
+    font-weight:bold;
+}
+#right table td {
+    border : 1px solid #ccc;
+    padding : 0 10px;
+}
+#right table td p {
+    margin:0;
+    padding : 0;
+}
+#right ul {
+    list-style : circle;
+}
+#right li p {
+    margin:0;
+    padding : 0;
+}
+#right li ul {
+    list-style-type : square;
+}
+#right li ul li ul li {
+    list-style-type : disc;
+}
+#right ul li span, #right ol li span {
+    font-size : 16px !important ;
+}
+#right a {
+    color : #000;
+    background : #fff;
+}
+#right a:hover {
+    text-decoration : none;
+}
+#right a:active {
+    color : #444;
+    background : #fff;
+}
+#right a:visited {
+    color : #000;
+    background : #fff;
+    text-decoration:none;
+}
+
+/* container */
+
+#container {
+    max-width:100%;
+    width : 900px;
+    background : #fff;
+    color : #000;
+    box-shadow:         0px 0px 20px 0px #222;
+    -webkit-box-shadow: 0px 0px 20px 0px #222222;
+    -moz-box-shadow:    0px 0px 20px 0px #222222;
+}
+
+/* sub nav */
+
+.sub-nav {
+    overflow:hidden;
+    margin:auto;
+    padding:20px 0;
+}
+.subnav-previous {
+    float:left;
+}
+.subnav-next {
+    float:right;
+}
+
+/* article */
+
+article {
+    margin:20px 0 40px 0;
+}
+
+/* comments */
+
+.Kommentare textarea,
+.Kommentare input {
+    max-width:100%;
+    display:block;
+    margin:20px 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius:    2px;
+    border-radius:         2px;
+}
+.Kommentare input {
+    width:60%;
+    padding:5px 5px;
+}
+.Kommentare textarea {
+    width:100%;
+    padding:10px 5px;
+    min-height:200px;
+    resize : vertical;
+}
+.Kommentare textarea,
+.Kommentare input[type="text"] {
+    border:1px solid #999;
+    background:#fff;
+    color:#000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+.Kommentare input[type="submit"] {
+    background:#000;
+    color:#fff;
+    padding:5px 15px;
+    border:none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        padding : 2em;
+    }
+    #container {
+        margin : 2em auto;
+        padding : 20px;
+    }
+    #right {
+        padding : 15px;
+    }
+
+}
+
+@media screen and (max-width: 1023px) {
+
+ header.mh {
+        background-position : top right;
+        -webkit-background-size: cover;
+        -moz-background-size:    cover;
+        -o-background-size:      cover;
+        background-size:         cover;
+    }
+    #container {
+    width : 100%;
+        box-shadow:         none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow:    none;
+    }
+    #left,
+    #right {
+    float :none;
+    margin:20px auto;
+    padding:0;
+    width:92%;
+    } 
+    .js #nav {
+        display: none;
+    }
+    .js .selectnav {
+        display: block;
+    }
+    .selectnav {
+        margin:20px auto 40px auto;
+        background:#fff;
+        color:#000;
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+        line-height: 1;
+        border: 1px solid #000;
+        height: 34px;
+        outline:none;
+        -webkit-appearance: none;
+    }
+    .selectnav option {
+        border-top:1px solid #333;
+        padding:3px 3px;
+    }
+    .selectnav option:first-child {
+        border-top:none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    header.mh {
+        height : auto;
+    }
+    header.mh h1 {
+        font-size : 30px;
+    }
+
+}
+@media screen and (max-width: 240px) {
+
+    header.mh h1 {
+        font-size : 20px;
+    }
+    h2 {
+        font-size : 16px;
+    }
+    h3 {
+        font-size : 15px;
+    }
+    #right p {
+        font-size : 14px;
+    }
+
+}
+
+
+@media print {
+
+html, body {
+    background : #fff;
+    color : #000;
+    font-family : "times new roman", times, serif;
+    text-align : justify;
+}
+h1, h2, h3, h4, h5, p, dl, ul, ol, a, abbr {
+    color : #000;
+    background-color : #fff;
+    text-shadow:none;
+}
+h1 a {
+    text-decoration : none;
+    color : #000;
+}
+p a, dl a {
+    color : #000;
+    background : #fff;
+}
+dt {
+    font-weight : bold;
+    margin-top : 20px;
+}
+#right {
+    margin-bottom:0;
+}
+#left, footer {
+    display : none;
+}
+*[title]:after {
+        content : " (" attr(title ) ")";
+color : #888;
+    background-color : inherit;
+    font-style : italic;
+}
+* {
+    quotes : "\201E" "\201C" "\201A" "\2018";
+}
+q:before, blockquote:before {
+    content : open-quote;
+}
+q:after, blockquote:after {
+    content : close-quote;
+}
+
+}
+
+

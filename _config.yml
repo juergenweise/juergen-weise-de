@@ -1,0 +1,21 @@
+name: "Dr. Jürgen Weise"
+description: "Aktuelle Themen der Stadt Leonberg aus dem kommunalpolitischen 
+Umfeld werden analysiert. Der Autor nimmt Stellung zu Gutachten und 
+Planungen von städtischen Projekten."
+
+url: "http://juergen-weise.de"
+
+paginate_path: "/artikel/page:num"
+
+markdown: rdiscount
+permalink: pretty
+highlighter: pygments
+
+
+ftp_host: 'ftp.juergen-weise.de'
+ftp_dir: '/'
+ftp_passive: false
+
+# optional
+ftp_port: 21
+
